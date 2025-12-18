@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+ .card {
+  position: absolute;
+  left: 935px;
+  top: 40%;
+  margin: auto;
+  transform: translateY(-20%);
+  background: rgb(223, 223, 223);
+  padding: 30px;
+  width: 380px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 10;
+} 
+.gif {
+  position: absolute;
+  left: 300px; 
+  top: 500px;
+  pointer-events: none;
+}
+
+.gif2 {
+  transform: scaleX(-1);
+  position: absolute;
+  right: 300px; 
+  top: 500px;
+  pointer-events: none;
+}
+
+.santa {
+  position: fixed;
+  top: 20px;        
+  left: -150px;        
+  width: 140px;
+  animation: moveX 6s linear infinite;
+  transform: skew(-120deg);
+}
+
+@keyframes moveX {
+  from {
+    transform: translateX(110vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes moveX {
+  from {
+    transform: translateX(110vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #222;
+}
+h2 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #333;
+}
+
+input[type="color"] {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+input[type="text"] {
+  width: 92%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#preview {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+}
+
+.valueBox {
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: rgb(146, 34, 34);
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: rgb(120, 28, 28);
+}
+
+.snow {
+  position: position;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
