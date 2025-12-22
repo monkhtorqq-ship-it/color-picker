@@ -2,7 +2,7 @@ const colorPicker = document.getElementById("colorPicker");
 const hexInput = document.getElementById("hexInput");
 const preview = document.getElementById("preview");
 const rgbValue = document.getElementById("rgbValue");
-
+  /* hex to rgb */
 function hexToRgb(hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
@@ -13,7 +13,7 @@ function hexToRgb(hex) {
       }
     : null;
 }
-
+  /*  */
 function updateColor(color) {
   preview.style.backgroundColor = color;
   hexInput.value = color;
