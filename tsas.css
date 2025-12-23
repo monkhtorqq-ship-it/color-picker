@@ -1,18 +1,16 @@
-:root {
-  --snow-color: white;
-}
+
 .snow {
   position: fixed;
-  top: -10px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   pointer-events: none;
-  z-index: 2;
-  background-color: var(--snow-color, white);
+  z-index: 0;
   animation-name: snowFall;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  background-color: white;
+  will-change: background-color;
 }
 
 @keyframes snowFall {
@@ -24,7 +22,7 @@
   }
 }
 
-/* Decorations */
+  /* Turuu's masterpiece */
 @keyframes moveX {
   from { transform: translateX(110vw); }
   to { transform: translateX(0); }

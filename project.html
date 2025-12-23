@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8" />    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Color Picker with Snowfall</title>
   <link rel="stylesheet" href="project.css" />
@@ -15,24 +15,17 @@
     <img src="/image/santa.gif" alt="santa" class="side.gif" />
   </div>
   <div class="gif">
-<<<<<<< HEAD
-    <img src="/image/gif.dabayo.gif" alt="gif" class="side.gif" />
-  </div>
-  <div class="gif2">
-    <img src="/image/gif-luffy.gif" alt="gif2" class="side.gif2"/>
-=======
     <img src="image/gif.dabayo.gif" alt="gif" class="side.gif" />
   </div>
   <div class="gif2">
     <img src="/image/gif-luffy.gif  " alt="gif2" class="side.gif2"/>
->>>>>>> f5f4eff8167698c27282899bcb6391b42996fd4a
   </div> 
   
   <!-- color picker -->
   <div class="card">
     <h2>Pick your color</h2>
     <input type="color" id="colorPicker" value="#ff0000" />
-    <input type="text" id="hexInput" placeholder="#000000" />
+    <input type="text" id="hexInput" placeholder="#ff0000" maxlength="7" pattern = "#?[a-fA-F\d]{6}"/>
     <button id="preview"></button>
     <button class="valueBox" id="rgbValue">RGB: 255, 0, 0 </button>
   </div>
