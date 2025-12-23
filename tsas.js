@@ -32,12 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* tal tsasiig randomoor songoh */
-  tsasniiarray = Array.from(tsasnuud);  
+  /* tsasaa holih */
+  const tsas_array = Array.from(document.querySelectorAll(".snow"));
+  for (let i = tsas_array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    tsas_array[i], tsas_array[j] = tsas_array[j], tsas_array[i];
+  }
+  const tsasnuud = tsas_array.slice(0, Math.floor(tsas_array.length / 2));    /* taliig ni songoh */
 
   /* ongiig ni oorchloh */
   function disco(color) {
-    const tsasnuud = document.querySelectorAll(".snow");
     tsasnuud.forEach(snow => {
       snow.style.backgroundColor = color;
     })
