@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  tsasniiarray = Array.from(tsasnuud);
+  /* tal tsasiig randomoor songoh */
+  tsasniiarray = Array.from(tsasnuud);  
 
   /* ongiig ni oorchloh */
   function disco(color) {
