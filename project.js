@@ -24,11 +24,11 @@ function updateColor(color) {
   }
 }
 
-colorPicker.addEventListener("input", e => {
+colorPicker.addEventListener("input", (e) => {
   updateColor(e.target.value);
 });
 
-hexInput.addEventListener("input", e => {
+hexInput.addEventListener("input", (e) => {
   const hex = e.target.value;
   if (/^#[0-9A-F]{6}$/i.test(hex)) {
     colorPicker.value = hex;
