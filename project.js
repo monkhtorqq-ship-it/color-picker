@@ -18,7 +18,7 @@ function hexToRgb(hex) {
 function updateColor(color) {
   preview.style.backgroundColor = color;
   hexInput.value = color;
-  snow.style.backgroundColor = color;
+  document.documentElement.style.setProperty("--snow-color", color);
   const rgb = hexToRgb(color);
   if (rgb) {
     rgbValue.textContent = `RGB: ${rgb.r}, ${rgb.g}, ${rgb.b}`;
@@ -38,5 +38,5 @@ hexInput.addEventListener("input", e => {
 
   });
 
-updateColor(colorPicker.value);
+
   
