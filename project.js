@@ -2,6 +2,7 @@ const colorPicker = document.getElementById("colorPicker");
 const hexInput = document.getElementById("hexInput");
 const preview = document.getElementById("preview");
 const rgbValue = document.getElementById("rgbValue");
+const snow = document.getElementsByClassName("snow");
   /* hex to rgb */
 function hexToRgb(hex) {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -17,7 +18,7 @@ function hexToRgb(hex) {
 function updateColor(color) {
   preview.style.backgroundColor = color;
   hexInput.value = color;
-
+  snow.style.backgroundColor = color;
   const rgb = hexToRgb(color);
   if (rgb) {
     rgbValue.textContent = `RGB: ${rgb.r}, ${rgb.g}, ${rgb.b}`;
