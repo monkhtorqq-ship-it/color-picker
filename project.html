@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8" />    
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Color Picker with Snowfall</title>
   <link rel="stylesheet" href="project.css" />
@@ -25,7 +25,7 @@
   <div class="card">
     <h2>Pick your color</h2>
     <input type="color" id="colorPicker" value="#ff0000" />
-    <input type="text" id="hexInput" placeholder="#000000" />
+    <input type="text" id="hexInput" placeholder="#ff0000" maxlength="7" pattern = "#?[a-fA-F\d]{6}"/>
     <button id="preview"></button>
     <button class="valueBox" id="rgbValue">RGB: 255, 0, 0 </button>
   </div>
