@@ -15,32 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         g: parseInt(result[2], 16),
         b: parseInt(result[3], 16),
       }
-<<<<<<< HEAD
-    : null;
-}
-  /*  */
-function updateColor(color) {
-  preview.style.backgroundColor = color;
-  hexInput.value = color;
-  document.documentElement.style.setProperty("--snow-color", color);
-  const rgb = hexToRgb(color);
-  if (rgb) {
-    rgbValue.textContent = `RGB: ${rgb.r}, ${rgb.g}, ${rgb.b}`;
-  }
-}
-
-colorPicker.addEventListener("input", e => {
-  updateColor(e.target.value);
-});
-
-hexInput.addEventListener("input", e => {
-  const hex = e.target.value;
-  if (/^#[0-9A-F]{6}$/i.test(hex)) {
-    colorPicker.value = hex;
-    updateColor(hex);
-=======
       : null;
->>>>>>> 0f17bbfea19cd936388202cae61f4bdb5b290941
   }
 
   /* ongoo huwilgah */
@@ -66,10 +41,6 @@ hexInput.addEventListener("input", e => {
     }
   });
 
-<<<<<<< HEAD
-
-  
-=======
   /* hex/rgb huulj awah */
   preview.addEventListener("click", () => {
     let hex = hexInput.value;
@@ -89,4 +60,36 @@ hexInput.addEventListener("input", e => {
   })
 
 })
->>>>>>> 0f17bbfea19cd936388202cae61f4bdb5b290941
+
+const btn = document.getElementById("btn");
+const text = document.getElementById("text");
+
+async function fetchMessage() {
+  try {
+    let res = await fetch('mendchilgee.json');
+    if (!res.ok) {
+      console.error('HTTP error', res.status);
+      return null; // return null if fetch failed
+    }
+    const data = await res.json();
+    return data; // <-- RETURN the JSON data here
+  } catch (error) {
+    console.error(error.message);
+    return null; // return null on error
+  }
+}
+ 
+let messages = [];
+
+// Fetch JSON and store in messages
+fetchMessage().then(data => {
+  if (data) {
+    messages = data.mendchilgee;
+  }
+});
+
+btn.addEventListener('click', () => {
+  if (messages.length === 0) return;
+  const randomIndex = Math.floor(Math.random() * messages.length);
+  text.textContent = messages[randomIndex];
+});
