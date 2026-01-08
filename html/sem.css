@@ -1,0 +1,28 @@
+:root {
+    background-color: grey;
+    color: white
+  }
+.dark-mode {
+    background-color: #121212;
+    color: #fc03df;
+  }
+
+body {
+    font-family: Arial;
+    padding: 20px;
+    
+  }
+  
+  input {
+    margin: 5px 0;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+  #result {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
