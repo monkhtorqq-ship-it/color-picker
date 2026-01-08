@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="tsas.css" />
 </head>
 
- <!-- useless -->
+ <!-- uselless -->
 <body>
   <div class="santa">
     <img src="image/santa.gif" alt="santa" class="side.gif" />
@@ -26,15 +26,46 @@
     <h2>Pick your color</h2>
     <input type="color" id="colorPicker" value="#ff0000" />
     <input type="text" id="hexInput" placeholder="#ff0000" maxlength="7" pattern = "#?[a-fA-F\d]{6}"/>
-    <button id="preview"></button>
     <button class="valueBox" id="rgbValue">RGB: 255, 0, 0 </button>
 
-    <h1>🎆 Шинэ жилийн мэндчилгээ 🎆</h1>
+  <!--nemelt combo-->
+  <!-- <h3>Gradient Picker</h3>
+  <input type="color" id="c1" value="#ff0000">
+  <input type="color" id="c2" value="#0000ff">
+  <div class="preview" id="preview"></div>
+
+  <div class="range-wrapper">
+    <label>Angle: <span id="angleValue">90</span>°</label>
+    <input type="range" id="angleRange" min="0" max="360" value="90">
+  </div>
+
+  <textarea id="cssCode" readonly></textarea> -->
+
+
+  <h3>Gradient Picker</h3>
+
+<input type="color" id="c1" value="#ff0000">
+<input type="color" id="c2" value="#00ff00">
+<input type="color" id="c3" value="#0000ff">
+
+<div class="preview" id="preview" style="height:120px; margin:10px 0;"></div>
+
+<div class="range-wrapper">
+  <label>Angle: <span id="angleValue">90</span>°</label>
+  <input type="range" id="angleRange" min="0" max="360" value="90">
+</div>
+
+<textarea id="cssCode" readonly style="width:100%; height:60px;"></textarea>
+
+
+
+
+    <h1>🎆 Шинэ жилийн мэндчилгээ 🎆 </h1>
     <button id="btn">Мэндчилгээ харуулах</button>
 
     <p id="text" style="color: purple; font-size: 200%;" ></p>
   </div>
-   
+     
   <!-- scrips -->
   <script src="tsas.js" defer></script>
   <script src="project.js" defer></script>

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const total = 200;
+  const total = 300;
   function randomRange(min, max) {
     return min + Math.floor(Math.random() * (max - min + 1));
   }
@@ -61,3 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
 ⠀⠀⠀⠀⠀⠀⠀⠈⠙⠶⣭⣒⠩⠖⢠⣤⠄⠀⠀⠀⠀⠀⠠⠔⠁⡰⠀⣧⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠲⢤⣀⣀⠉⠉⠀⠀⠀⠀⠀⠁⠀⣠⠏⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠛⠒⠲⠶⠤⠴⠒⠚⠁      */
+
+

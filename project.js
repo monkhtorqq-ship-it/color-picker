@@ -93,3 +93,32 @@ btn.addEventListener('click', () => {
   const randomIndex = Math.floor(Math.random() * messages.length);
   text.textContent = messages[randomIndex];
 });
+
+
+// nemelt combo 
+
+  const grad1 = document.getElementById("c1");
+  const grad2 = document.getElementById("c2");
+  const grad3 = document.getElementById("c3");
+
+  const angleRange = document.getElementById("angleRange");
+  const angleDisplay = document.getElementById("angleValue");
+  const gradientPreview = document.getElementById("preview");
+  const cssCode = document.getElementById("cssCode");
+
+  function updateGradient() {
+    const angle = angleRange.value;
+    angleDisplay.textContent = angle;
+
+    const gradientStr = `linear-gradient(${angle}deg, ${grad1.value}, ${grad2.value}, ${grad3.value})`;
+    gradientPreview.style.background = gradientStr;
+    cssCode.value = `background: ${gradientStr};`;
+  }
+
+  grad1.addEventListener("input", updateGradient);
+  grad2.addEventListener("input", updateGradient);
+  grad3.addEventListener("input", updateGradient);
+  angleRange.addEventListener("input", updateGradient);
+
+  updateGradient();
+
